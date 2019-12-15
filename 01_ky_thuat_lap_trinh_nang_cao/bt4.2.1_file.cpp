@@ -40,11 +40,16 @@ void xuat_mang_mot_chieu(int a[], int n) {
 }
 
 int ktra_so_nguyen_to(int a) {
-	for (int i=2; i<=a/2; i++) {
-		if (a%2 == 0)
-			return 1;		
-	}
-	return 0;
+	if (a < 0)
+		return 1;
+	else if (a == 2)
+		return 0;
+	else
+		for (int i=2; i<=a/2; i++) {
+			if (a%2 == 0)
+				return 1;		
+		}
+		return 0;
 }
 
 void ghi_so_nguyen_to_vao_file(int a[], int n) {
